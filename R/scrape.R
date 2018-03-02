@@ -483,7 +483,7 @@ gids2urls <- function(x) {
   if (any(not.mlb)) league[not.mlb] <- substr(x[not.mlb], 26, 28)
   base <- paste0(root, league)
   paste0(base, "/year_", substr(x, 5, 8), "/month_", substr(x, 10, 11),
-         "/day_", substr(x, 13, 14), "/", x)
+         "/day_", substr(x, 13, 14), x)
 }
 
 #Find the proper subset of game IDs based on start/end dates
